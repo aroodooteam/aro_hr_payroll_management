@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<menuitem 
+    		id="menu_hr_payroll_management_root"
+    		parent="hr.menu_hr_root"
+    		name="Gestion de la paie"
+    		groups="base.group_hr_manager"
+    		sequence="8"/>
+    </data>
+</openerp>

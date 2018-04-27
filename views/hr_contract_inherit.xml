@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Root Menus -->
+        <!-- Contract View -->
+        <record id="hr_contract_form_inherit" model="ir.ui.view">
+            <field name="name">hr.contract.view.form.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+            	<page string="Information" name="information" position="after">
+            		<page string="Les rubriques">
+            			<field colspan="4" name="contract_rubrique_ids" nolabel="1">
+                                <tree>
+                                    <field name="code_rubrique"/>
+                                    <field name="rubrique_id"/>
+                                    <field name="amount"/>
+                                </tree>
+                                <form string="Lignes rubriques">
+                                    <group col="2" colspan="2">
+                                        <field name="rubrique_id"/>
+                                        <field name="code_rubrique"/>
+                                        <field name="amount"/>
+                                    </group>
+                                </form>
+                        </field>
+            		</page>
+                    <page string="Les rubriques champ par champ">
+                        <group col="2" colspan="2">
+                            <field name="complement_salaire"/>
+                            <field name="indemnite_transport"/>
+                            <field name="indemnite_logement"/>
+                            <field name="indemnite_representation"/>
+                            <field name="remboursement_avance"/>
+                            <field name="retraite_prevoyance"/>
+                            <field name="cotisation_amicale"/>
+                            <field name="cotisation_medicale"/>
+
+                        </group>
+                    </page>
+            	</page>
+            </field>
+        </record>
+    </data>
+</openerp>

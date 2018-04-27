@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    	<!-- Vue form hr_payroll_rubrique  -->
+    	<record id="hr_payroll_rubrique_form" model="ir.ui.view">
+            <field name="name">hr.payroll.rubrique.form</field>
+            <field name="model">hr.payroll.rubrique</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Rubriques">
+                    <sheet>
+                        <group col="2" colspan="2">
+                    	   <field name="code_rubrique"/>
+                    	   <field name="name"/>
+                    	   <field name="category_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Vue tree hr_payroll_rubrique -->
+        <record id="hr_payroll_rubrique_tree" model="ir.ui.view">
+            <field name="name">hr.payroll.rubrique.tree</field>
+            <field name="model">hr.payroll.rubrique</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Rubriques">
+                    <field name="code_rubrique"/>
+                    <field name="name"/>
+                    <field name="category_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vue Recherche -->
+         <record id="hr_payroll_rubrique_search" model="ir.ui.view">
+            <field name="name">hr.payroll.rubrique.search</field>
+            <field name="model">hr.payroll.rubrique</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Rubriques">
+                	<field name="code_rubrique"/>
+                    <field name="name"/>
+                </search>
+            </field>
+         </record>
+
+         <!-- Action du menu hr_payroll_rubrique-->
+        <record model="ir.actions.act_window" id="action_gestion_payroll_rubrique">
+            <field name="name">Les rubriques</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.rubrique</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Créer une nouvelle rubrique.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem action="action_gestion_payroll_rubrique"
+                  id="menu_hr_payroll_rubrique"
+                  parent="menu_hr_payroll_management_root"
+                  sequence="10"/>
+    </data>
+</openerp>
