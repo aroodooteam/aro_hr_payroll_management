@@ -35,6 +35,7 @@
                             <field name="retraite_prevoyance"/>
                             <field name="cotisation_amicale"/>
                             <field name="cotisation_medicale"/>
+                            <field name="indemnite_interim"/>
 
                         </group>
                     </page>
